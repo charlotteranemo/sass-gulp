@@ -1,0 +1,83 @@
+//Mixins
+@mixin small-text($size) {
+    @if $size < 1.2em {
+        font-family: $size $font-small;
+        line-height: 1.2em;
+    } @else {
+        font-family: 0.9em $font-small;
+        line-height: 1.2em;
+    }
+    
+}
+
+@mixin smallImg {
+    width: 23%;
+    margin: 1%;
+}
+
+//Fonts
+
+$font-special: 'Parisienne', cursive;
+$font-headers: 'Charm', cursive;
+$font-small: 'Open Sans', sans-serif;
+$font-nav: 'Raleway', sans-serif;
+
+//Colors
+
+$background-color: #F0ECE1;
+$main-purple: #AF7279;
+$accent-color: #283D50;
+$main-beige: #DEC59F;
+
+h1 {
+    font: 2.2em $font-headers;
+}
+
+h2 {
+    font: 2em $font-headers;
+}
+
+h3 {
+    font: 1.6em $font-headers;
+}
+
+h4 {
+    font: 1.4em $font-headers;
+}
+
+h5 {
+    font: 1.2em $font-headers;
+}
+
+h6 {
+    font: 1.1em $font-headers;
+}
+
+a {
+    @include small-text(0.9em);
+}
+
+p {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    max-width: 700px;
+    @include small-text(0.9em);
+}
+
+ul, ol {
+    @extend p;
+}
+
+ol li {
+    list-style: decimal;
+}
+
+ul li {
+    list-style: disc;
+}
+
+em {
+    font-style: italic;
+}
+

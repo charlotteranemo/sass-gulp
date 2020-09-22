@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weddingly</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Open+Sans&family=Parisienne&family=Raleway&display=swap" rel="stylesheet">
+    <script>
+        window.onscroll = function() {
+            if(document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+                document.getElementById("header").className = "fixed";
+            } else {
+                document.getElementById("header").className = "";
+            }
+        }
+
+        window.onload = function() {
+            var menuBtn = document.getElementById("menu-btn");
+            var mainNav = document.getElementById("menu");
+            let menuOpen = false;
+
+                menuBtn.addEventListener("click", () => {
+                if(!menuOpen) {
+                    menuBtn.classList.add("open");
+                    mainNav.classList.add("show");
+                    menuOpen = true;
+                } else {
+                    menuBtn.classList.remove("open");
+                    mainNav.classList.remove("show");
+                    menuOpen = false;
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="logo">Weddingly</h1>
+        <div id="menu-btn">
+            <div class="menu-btn"></div>
+        </div>
+        <nav class="menu" id="menu">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Reviews</a>
+            <a href="#">Images</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div id="mainImage">
+        <img src="pictures/weddingly.jpg" alt="Bride and groom" id="mainImg">
+        <h1>Did someone say 'I do'?</h1>
+        <div class="divider"></div>
+        <p>We are a fictional wedding planning company with a goal to make every fictional wedding we encounter as special as possible. After all, it is one of the biggest days of your life!</p>
+        <p>You can contact us by going to our contact page, and we can start planning the wedding of your dreams. Check out some of the pictures below or some other images under the image tab.</p>
+        <p>We look forward to hearing from you!</p>
+        <p>Weddingly</p>
+    </div>
+    <div class="divider"></div>
+    <div id="miniImgs">
+        <img src="pictures/wedding1.jpg" alt="Wedding">
+        <img src="pictures/wedding2.jpg" alt="Wedding">
+        <img src="pictures/wedding3.jpg" alt="Wedding">
+        <img src="pictures/wedding4.jpg" alt="Wedding">
+    </div>
+    <footer>
+        <p>&copy; Weddingly 2020</p>
+    </footer>
+</body>
+</html>
